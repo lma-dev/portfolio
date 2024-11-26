@@ -61,6 +61,7 @@ const Hero = () => {
                 whileTap={{ scale: 0.95 }}
                 src={profilePic}
                 alt="Profile"
+                loading="lazy"
                 className="rounded-lg shadow-lg"
               />
             </motion.div>

@@ -34,6 +34,7 @@ export const About = () => {
               className="rounded-lg shadow-lg transition-all"
               src={aboutImg}
               alt="About"
+              loading="lazy"
             />
           </motion.div>
         </motion.div>
