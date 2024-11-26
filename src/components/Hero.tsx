@@ -73,11 +73,10 @@ const Hero = () => {
       <div className="mt-8 flex justify-center lg:justify-start">
         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
           <a
-            href="/src/cv/CV_EngVersion.pdf"
-            download
+            href="mailto:lwinmoeaung.it@gmail.com"
             className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-400 text-white font-medium py-3 px-6 rounded-lg shadow-md hover:from-purple-600 hover:via-pink-600 hover:to-red-500 focus:ring-4 focus:ring-pink-300"
           >
-            Download CV
+            Send Email
           </a>
         </motion.div>
       </div>
