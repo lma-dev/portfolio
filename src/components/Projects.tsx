@@ -11,7 +11,7 @@ export const Projects = () => {
         transition={{ duration: 0.5 }}
         className="my-16 text-center text-4xl font-bold text-gray-800"
       >
-        Some Projects
+        Some Sample Projects
       </motion.h2>
 
       {/* Projects List */}

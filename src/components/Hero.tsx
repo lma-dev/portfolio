@@ -1,5 +1,5 @@
 import { HERO_CONTENT } from "../constants/index";
-import profilePic from "../assets/kevinRushProfile.jpg";
+import profilePic from "../assets/profileOne.jpg";
 import { motion } from "framer-motion";
 
 const container = (delay: number) => ({
@@ -70,13 +70,15 @@ const Hero = () => {
 
       {/* Button Section */}
       <div className="mt-8 flex justify-center lg:justify-start">
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-400 text-white font-medium py-3 px-6 rounded-lg shadow-md hover:from-purple-600 hover:via-pink-600 hover:to-red-500 focus:ring-4 focus:ring-pink-300"
-        >
-          Download CV
-        </motion.button>
+        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+          <a
+            href="/src/cv/CV_EngVersion.pdf"
+            download
+            className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-400 text-white font-medium py-3 px-6 rounded-lg shadow-md hover:from-purple-600 hover:via-pink-600 hover:to-red-500 focus:ring-4 focus:ring-pink-300"
+          >
+            Download CV
+          </a>
+        </motion.div>
       </div>
     </div>
   );

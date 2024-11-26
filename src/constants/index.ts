@@ -1,7 +1,6 @@
-import project1 from "../assets/projects/project-1.jpg";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
+import project1 from "../assets/projects/project-alpha.png";
+import project2 from "../assets/projects/project-beta.png";
+import project3 from "../assets/projects/project-1.png";
 
 export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in backend-end technologies like PHP(Laravel), as well as front-end technologies like Next js, MySQL, Oracle, and Firebase. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
 
@@ -46,39 +45,71 @@ export const EXPERIENCES = [
   },
 ];
 
-export const PROJECTS = [
+export const ACHIEVEMENTS = [
   {
-    title: "E-Commerce Website",
-    image: project1,
-    description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+    year: "2017",
+    title: "School Web Creation Competition",
+    description: `Won the SECOND prize.`,
+    link:""
   },
   {
-    title: "Task Management App",
-    image: project2,
-    description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
+    year: "2017",
+    title: "ITPEC Quiz Competition (Myanmar)",
+    description: `Passed 16 teams stage`,
+    link:""
   },
   {
-    title: "Portfolio Website",
-    image: project3,
-    description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
+    year: "2018",
+    title: "Graduated from Metro",
+    description: `Graduated with GOLDEN badge.`,
+    link:""
   },
   {
-    title: "Blogging Platform",
-    image: project4,
-    description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
+    year: "2022",
+    title: "CodeWar challenge",
+    description: `Rank:8 kyu`,
+    link: "https://www.codewars.com/users/lwinmoeaung",
+  },
+  {
+    year: "2022",
+    title: "HackerRank challenge",
+    description: `Gold level badge.`,
+    link: "https://www.hackerrank.com/profile/lmadev",
+  },
+  {
+    year: "2023",
+    title: "Lara Camp Competition (Myanmar)",
+    description: `Winner Prize and led the winning team as team leader.`,
+    link: "https://github.com/lara-camp",
   },
 ];
 
+export const PROJECTS = [
+  {
+    title: "Compliance Wizard",
+    image: project1,
+    description:
+      "A web application that uses AI to check company policies for compliance with legal requirements.",
+    technologies: ["Next js", "Tailwind", "Laravel", "MySql"],
+  },
+  {
+    title: "Education Support System",
+    image: project2,
+    description:
+      "A web application that helps students for learning materials.",
+      technologies: ["Bootstrap", "Laravel", "MySql"],
+    },
+    {
+      title: "Domalog",
+      image: project3,
+      description:
+        "Gaming information sharing website. Users can share their gaming experiences and tips.",
+        technologies: ["Tailwind", "Angular", "Laravel","MySql"],
+      },
+];
+
 export const CONTACT = {
-  address: "767 Fifth Avenue, New York, NY 10153 ",
-  phone: "+12 4555 666 00 ",
-  email: "me@example.com",
+  address: "Live in Tokyo , Japan",
+  phone: "+81 070-122-65089",
+  email: "lwinmoeaung.it@gmail.com",
 };
