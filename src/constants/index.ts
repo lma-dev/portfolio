@@ -43,6 +43,13 @@ export const EXPERIENCES = [
     description: `Developed Policy Checking System Using Ai , Learning ManagementSystem, School Exam System and so on. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
     technologies: ["Next Js","tailwind","Bootstrap","Laravel", "mySQL","firebase"],
   },
+  {
+    year: "2025",
+    role: "Freelance Developer",
+    company: "FreeLance",
+    description: `Food E-commerce System`,
+    technologies: ["Java Spring","tailwind","React", "mySQL"],
+  },
 ];
 
 export const ACHIEVEMENTS = [
