@@ -1,5 +1,6 @@
 import { HERO_CONTENT } from "../constants/index";
-import profilePic from "../assets/profileOne.jpg";
+import profilePicWebp from "../assets/profileOne.jpg?w=800&format=webp&quality=80&imagetools";
+import profilePicFallback from "../assets/profileOne.jpg?w=800&quality=80&imagetools";
 import { motion } from "framer-motion";
 
 const container = (delay: number) => ({
@@ -56,14 +57,19 @@ const Hero = () => {
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 1, duration: 1.2 }}
             >
-              <motion.img
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                src={profilePic}
-                alt="Profile"
-                loading="lazy"
-                className="rounded-lg shadow-lg"
-              />
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <picture>
+                  <source srcSet={profilePicWebp} type="image/webp" />
+                  <img
+                    src={profilePicFallback}
+                    alt="Lwin Moe Aung - Full Stack Developer"
+                    width={800}
+                    height={533}
+                    fetchPriority="high"
+                    className="rounded-lg shadow-lg"
+                  />
+                </picture>
+              </motion.div>
             </motion.div>
           </div>
         </div>

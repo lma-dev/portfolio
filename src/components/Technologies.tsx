@@ -1,29 +1,48 @@
+import { useRef, useMemo } from "react";
 import { TbBrandNextjs } from "react-icons/tb";
-import { FaLaravel } from "react-icons/fa6";
-import { SiMysql } from "react-icons/si";
-import { FaPhp } from "react-icons/fa6";
-import { FaGithub } from "react-icons/fa";
-import { FaAws } from "react-icons/fa";
-import { motion } from "framer-motion";
-import { Variants } from "framer-motion";
-import { SiTailwindcss } from "react-icons/si";
+import { FaLaravel, FaPhp } from "react-icons/fa6";
+import { SiMysql, SiTailwindcss } from "react-icons/si";
+import { FaGithub, FaAws } from "react-icons/fa";
 import { BsBootstrap } from "react-icons/bs";
+import { motion, useInView } from "framer-motion";
+import type { Variants } from "framer-motion";
 
-const iconVariants: (duration: number) => Variants = (duration) => ({
+const createIconVariants = (duration: number): Variants => ({
   initial: { y: -10 },
   animate: {
     y: 0,
     transition: {
-      duration: duration,
+      duration,
       ease: "linear",
       repeat: Infinity,
       repeatType: "reverse",
     },
   },
+  paused: { y: -10 },
 });
+
+const ICON_CONFIGS: { Icon: React.ComponentType<{ className?: string }>; duration: number; className: string }[] = [
+  { Icon: FaLaravel, duration: 2.5, className: "text-7xl text-red-400" },
+  { Icon: FaPhp, duration: 3, className: "text-7xl text-blue-400" },
+  { Icon: SiMysql, duration: 5, className: "text-7xl text-cyan-600" },
+  { Icon: TbBrandNextjs, duration: 2, className: "text-7xl text-black-400" },
+  { Icon: FaGithub, duration: 6, className: "text-7xl text-black-400" },
+  { Icon: FaAws, duration: 4, className: "text-7xl text-white-400" },
+  { Icon: SiTailwindcss, duration: 3, className: "text-7xl text-black-400" },
+  { Icon: BsBootstrap, duration: 2.5, className: "text-7xl text-black-400" },
+];
+
 export const Technologies = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(sectionRef, { margin: "100px" });
+
+  const variants = useMemo(
+    () => ICON_CONFIGS.map((config) => createIconVariants(config.duration)),
+    []
+  );
+
   return (
-    <div className="border-b border-neutral-800 pb-24">
+    <div ref={sectionRef} className="border-b border-neutral-800 pb-24">
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
@@ -38,70 +57,17 @@ export const Technologies = () => {
         transition={{ duration: 1.5 }}
         className="flex flex-wrap justify-center gap-4"
       >
-        <motion.div
-          variants={iconVariants(2.5)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <FaLaravel className="text-7xl text-red-400" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(3)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <FaPhp className="text-7xl text-blue-400" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(5)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <SiMysql className="text-7xl text-cyan-600" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(2)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <TbBrandNextjs className="text-7xl text-black-400" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(6)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <FaGithub className="text-7xl text-black-400" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(4)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <FaAws className="text-7xl text-white-400" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(3)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <SiTailwindcss className="text-7xl text-black-400" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(2.5)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <BsBootstrap className="text-7xl text-black-400" />
-        </motion.div>
+        {ICON_CONFIGS.map(({ Icon, className }, index) => (
+          <motion.div
+            key={index}
+            variants={variants[index]}
+            initial="initial"
+            animate={isInView ? "animate" : "paused"}
+            className="rounded-2xl border-4 border-neutral-800 p-4"
+          >
+            <Icon className={className} />
+          </motion.div>
+        ))}
       </motion.div>
     </div>
   );

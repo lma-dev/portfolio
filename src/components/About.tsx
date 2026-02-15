@@ -1,4 +1,5 @@
-import aboutImg from "../assets/profileTwo.jpeg";
+import aboutImgWebp from "../assets/profileTwo.jpeg?w=600&format=webp&quality=75&imagetools";
+import aboutImgFallback from "../assets/profileTwo.jpeg?w=600&quality=75&imagetools";
 import { ABOUT_TEXT } from "../constants";
 import { motion } from "framer-motion";
 
@@ -30,12 +31,17 @@ export const About = () => {
             whileTap={{ scale: 0.95, rotate: 0 }}
             className="flex items-center justify-center"
           >
-            <img
-              className="rounded-lg shadow-lg transition-all"
-              src={aboutImg}
-              alt="About"
-              loading="lazy"
-            />
+            <picture>
+              <source srcSet={aboutImgWebp} type="image/webp" />
+              <img
+                className="rounded-lg shadow-lg transition-all"
+                src={aboutImgFallback}
+                alt="Lwin Moe Aung working at his desk"
+                loading="lazy"
+                width={600}
+                height={630}
+              />
+            </picture>
           </motion.div>
         </motion.div>
 

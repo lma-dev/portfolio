@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Read(//Users/recycle/work/portfolio-react/**)",
+      "Bash(npm uninstall:*)"
+    ]
+  }
+}
