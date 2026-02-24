@@ -83,18 +83,6 @@ export const CaseStudyModal = ({ project, onClose }: CaseStudyModalProps) => {
           <FiX size={20} />
         </button>
 
-        {/* Hero Image */}
-        <div className="overflow-hidden rounded-t-2xl">
-          <picture>
-            <source srcSet={project.imageWebp} type="image/webp" />
-            <img
-              src={project.image}
-              alt={`Screenshot of ${project.title}`}
-              className="w-full aspect-video object-cover"
-            />
-          </picture>
-        </div>
-
         {/* Content */}
         <div className="p-6 lg:p-10">
           {/* Header */}

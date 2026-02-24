@@ -1,6 +1,6 @@
 import { HERO_CONTENT } from "../constants/index";
-import profilePicWebp from "../assets/profileOne.jpg?w=800&format=webp&quality=80&imagetools";
-import profilePicFallback from "../assets/profileOne.jpg?w=800&quality=80&imagetools";
+import profilePicWebp from "../assets/profileOne.jpg?w=1200&format=webp&quality=90&imagetools";
+import profilePicFallback from "../assets/profileOne.jpg?w=1200&quality=90&imagetools";
 import { motion } from "framer-motion";
 
 const container = (delay: number) => ({

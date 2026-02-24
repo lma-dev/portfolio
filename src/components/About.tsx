@@ -1,5 +1,5 @@
-import aboutImgWebp from "../assets/profileTwo.jpeg?w=600&format=webp&quality=75&imagetools";
-import aboutImgFallback from "../assets/profileTwo.jpeg?w=600&quality=75&imagetools";
+import aboutImgWebp from "../assets/profileTwo.jpeg?w=900&format=webp&quality=90&imagetools";
+import aboutImgFallback from "../assets/profileTwo.jpeg?w=900&quality=90&imagetools";
 import { ABOUT_TEXT } from "../constants";
 import { motion } from "framer-motion";
 

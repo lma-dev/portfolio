@@ -17,8 +17,8 @@ export interface Project {
   title: string;
   description: string;
   fullDescription?: string;
-  imageWebp: string;
-  image: string;
+  imageWebp?: string;
+  image?: string;
   technologies: string[];
   category: ProjectCategory;
   featured: boolean;

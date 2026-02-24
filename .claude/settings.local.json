@@ -3,7 +3,8 @@
     "allow": [
       "Bash(find:*)",
       "Read(//Users/recycle/work/portfolio-react/**)",
-      "Bash(npm uninstall:*)"
+      "Bash(npm uninstall:*)",
+      "Bash(npx tsc --noEmit)"
     ]
   }
 }

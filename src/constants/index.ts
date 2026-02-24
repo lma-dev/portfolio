@@ -173,6 +173,34 @@ export const PROJECTS: Project[] = [
     },
   },
   {
+    id: "lucky-draw",
+    title: "Lucky Draw",
+    description:
+      "A full-stack lucky draw management platform for organizing prize draws with seat reservations and payment tracking.",
+    fullDescription:
+      "A comprehensive lucky draw management system built for organizing and managing prize draw events. Features include prize creation with configurable seat pools, seat reservation and payment tracking, participant management, ticket generation, bulk operations, activity logging, and an admin dashboard with real-time statistics.",
+    technologies: ["Next.js", "Tailwind", "Prisma", "MySQL", "NextAuth", "AWS S3"],
+    category: "freelance",
+    featured: true,
+    order: 4,
+    year: "2025",
+    role: "Freelance Developer",
+    caseStudy: {
+      problem:
+        "The client needed a reliable system to manage lucky draw events with hundreds of seats, track reservations and payments, and generate tickets — replacing error-prone manual spreadsheet workflows.",
+      solution:
+        "Built a full-stack Next.js application with Prisma ORM and MySQL, featuring a real-time admin dashboard, seat reservation system with payment verification, bulk operations for efficient management, and AWS S3 integration for file storage.",
+      results:
+        "Delivered a production-ready platform that streamlined the entire lucky draw workflow, from prize setup to ticket generation, enabling the client to manage events efficiently with full audit logging.",
+      highlights: [
+        "Real-time admin dashboard with statistics",
+        "Seat reservation and payment tracking",
+        "Bulk operations for efficient management",
+        "Activity logging and audit trail",
+      ],
+    },
+  },
+  {
     id: "domalog",
     title: "Domalog",
     imageWebp: project3,

@@ -16,17 +16,21 @@ export const CompactProjectCard = ({ project }: CompactProjectCardProps) => {
       className="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200"
     >
       {/* Image */}
-      <div className="overflow-hidden aspect-video">
-        <picture>
-          <source srcSet={project.imageWebp} type="image/webp" />
-          <img
-            src={project.image}
-            alt={`Screenshot of ${project.title}`}
-            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-            loading="lazy"
-          />
-        </picture>
-      </div>
+      {project.image && (
+        <div className="overflow-hidden aspect-video">
+          <picture>
+            {project.imageWebp && (
+              <source srcSet={project.imageWebp} type="image/webp" />
+            )}
+            <img
+              src={project.image}
+              alt={`Screenshot of ${project.title}`}
+              className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+      )}
 
       {/* Content */}
       <div className="p-4">
