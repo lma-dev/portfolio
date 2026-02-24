@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import ChatBot from "./components/chatbot/ChatBot";
 import "./css/style.css";
 
 const About = lazy(() =>
@@ -18,10 +19,6 @@ const Experience = lazy(() =>
 const Projects = lazy(() =>
   import("./components/Projects").then((m) => ({ default: m.Projects }))
 );
-const Contact = lazy(() =>
-  import("./components/Contact").then((m) => ({ default: m.Contact }))
-);
-
 const App = () => {
   return (
     <div className="overflow-x-hidden text-neutral-700 antialiased selection:bg-cyan-300 selection:text-cyan-900">
@@ -38,9 +35,10 @@ const App = () => {
           <Achievement />
           <Experience />
           <Projects />
-          <Contact />
         </Suspense>
       </div>
+
+      <ChatBot />
     </div>
   );
 };

@@ -2,6 +2,7 @@ import { HERO_CONTENT } from "../constants/index";
 import profilePicWebp from "../assets/profileOne.jpg?w=1200&format=webp&quality=90&imagetools";
 import profilePicFallback from "../assets/profileOne.jpg?w=1200&quality=90&imagetools";
 import { motion } from "framer-motion";
+import { BsChatDotsFill } from "react-icons/bs";
 
 const container = (delay: number) => ({
   hidden: { x: -100, opacity: 0 },
@@ -57,7 +58,10 @@ const Hero = () => {
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 1, duration: 1.2 }}
             >
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <picture>
                   <source srcSet={profilePicWebp} type="image/webp" />
                   <img
@@ -75,17 +79,27 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Button Section */}
-      <div className="mt-8 flex justify-center lg:justify-start">
-        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-          <a
-            href="mailto:lwinmoeaung.it@gmail.com"
-            className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-400 text-white font-medium py-3 px-6 rounded-lg shadow-md hover:from-purple-600 hover:via-pink-600 hover:to-red-500 focus:ring-4 focus:ring-pink-300"
-          >
-            Send Email
-          </a>
-        </motion.div>
-      </div>
+      {/* Assistant hint */}
+      <motion.div
+        variants={container(1.5)}
+        initial="hidden"
+        animate="visible"
+        className="mt-8 flex justify-center lg:justify-start"
+      >
+        <motion.button
+          whileHover={{ scale: 1.05, boxShadow: "0 4px 20px rgba(168,85,247,0.25)" }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => window.dispatchEvent(new Event("open-chatbot"))}
+          className="group inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-400 px-6 py-3 cursor-pointer shadow-md hover:shadow-lg transition-shadow"
+        >
+          <BsChatDotsFill className="text-white" size={16} />
+          <span className="text-sm font-semibold text-white tracking-wide">Let's Chat</span>
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-white" />
+          </span>
+        </motion.button>
+      </motion.div>
     </div>
   );
 };
