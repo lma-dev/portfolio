@@ -36,14 +36,16 @@ export const Experience = () => {
                 </span>
               </h6>
               <p className="mb-4 text-gray-600">{experience.description}</p>
-              {experience.technologies.map((technology, index) => (
-                <span
-                  key={index}
-                  className="rounded px-2 py-1 font-medium bg-gray-200 text-gray-800 text-sm mr-2 mt-4"
-                >
-                  {technology}
-                </span>
-              ))}
+              <div className="flex flex-wrap gap-2">
+                {experience.technologies.map((technology, index) => (
+                  <span
+                    key={index}
+                    className="whitespace-nowrap rounded px-2 py-1 font-medium bg-gray-200 text-gray-800 text-sm"
+                  >
+                    {technology}
+                  </span>
+                ))}
+              </div>
             </motion.div>
           </div>
         ))}

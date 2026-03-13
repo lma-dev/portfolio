@@ -26,7 +26,6 @@ export const EXPERIENCES = [
     description: `Developed multiple enterprise systems including Inventory Management System, SOP Tool Guide System, Learning Management System (Moodle), Attendance Management System, and Employee Information Management System. Handled full development lifecycle from design to testing and maintenance.`,
     technologies: [
       "Java EE",
-      "Java Spring",
       "Oracle",
       "PHP",
       "Laravel",
@@ -82,12 +81,7 @@ export const ACHIEVEMENTS = [
     description: `Passed the ITPEC IP Examination.`,
     link: "",
   },
-  {
-    year: "2017",
-    title: "School Web Creation Competition",
-    description: `Won the SECOND prize.`,
-    link: "",
-  },
+
   {
     year: "2017",
     title: "ITPEC Quiz Competition (Myanmar)",
@@ -100,18 +94,7 @@ export const ACHIEVEMENTS = [
     description: `Passed the ITPEC FE Examination.`,
     link: "",
   },
-  {
-    year: "2018",
-    title: "Graduated from Metro IT & Japanese School",
-    description: `Graduated with GOLDEN badge.`,
-    link: "",
-  },
-  {
-    year: "2022",
-    title: "Japanese Language Proficiency Test (JLPT N3)",
-    description: `Certified Japanese Language Proficiency Test N3 level.`,
-    link: "",
-  },
+
   {
     year: "2022",
     title: "CodeWars Challenge",
@@ -129,18 +112,6 @@ export const ACHIEVEMENTS = [
     title: "Lara Camp Competition (Myanmar)",
     description: `Winner Prize and led the winning team as team leader.`,
     link: "https://github.com/lara-camp",
-  },
-  {
-    year: "2024",
-    title: "AWS Certified Cloud Practitioner",
-    description: `Earned AWS Certified Cloud Practitioner certification.`,
-    link: "",
-  },
-  {
-    year: "2026",
-    title: "BS in Information Technology and Data Science",
-    description: `Graduated from European International University - Paris with a Bachelor of Science in IT and Data Science.`,
-    link: "",
   },
 ];
 
@@ -212,7 +183,14 @@ export const PROJECTS: Project[] = [
       "A full-stack lucky draw management platform for organizing prize draws with seat reservations and payment tracking.",
     fullDescription:
       "A comprehensive lucky draw management system built for organizing and managing prize draw events. Features include prize creation with configurable seat pools, seat reservation and payment tracking, participant management, ticket generation, bulk operations, activity logging, and an admin dashboard with real-time statistics.",
-    technologies: ["Next.js", "Tailwind", "Prisma", "MySQL", "NextAuth", "AWS S3"],
+    technologies: [
+      "Next.js",
+      "Tailwind",
+      "Prisma",
+      "MySQL",
+      "NextAuth",
+      "AWS S3",
+    ],
     category: "freelance",
     featured: true,
     order: 4,
@@ -269,7 +247,8 @@ export const EDUCATION = [
   {
     year: "2025 - 2026",
     institution: "European International University - Paris",
-    degree: "Bachelor of Science (BS) in Information Technology and Data Science",
+    degree:
+      "Bachelor of Science (BS) in Information Technology and Data Science",
   },
   {
     year: "2016 - 2018",
