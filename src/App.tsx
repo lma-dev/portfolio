@@ -16,8 +16,14 @@ const Achievement = lazy(() =>
 const Experience = lazy(() =>
   import("./components/Experience").then((m) => ({ default: m.Experience }))
 );
+const Education = lazy(() =>
+  import("./components/Education").then((m) => ({ default: m.Education }))
+);
 const Projects = lazy(() =>
   import("./components/Projects").then((m) => ({ default: m.Projects }))
+);
+const Contact = lazy(() =>
+  import("./components/Contact").then((m) => ({ default: m.Contact }))
 );
 const App = () => {
   return (
@@ -34,7 +40,9 @@ const App = () => {
           <Technologies />
           <Achievement />
           <Experience />
+          <Education />
           <Projects />
+          <Contact />
         </Suspense>
       </div>
 

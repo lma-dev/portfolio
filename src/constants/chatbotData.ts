@@ -37,7 +37,7 @@ export const CHAT_QA: ChatQA[] = [
     id: "skills-tech",
     question: "What technologies do you use?",
     answer:
-      "I work primarily with PHP (Laravel), Next.js, React, MySQL, Firebase, Tailwind CSS, and Bootstrap. I'm experienced in both frontend and backend development.",
+      "I work primarily with PHP (Laravel), Next.js, TypeScript, React, Java (Spring), MySQL, Oracle, Tailwind CSS, and Bootstrap. I also have experience with Docker, AWS, REST APIs, and AI integrations (OpenAI API, Azure AI API).",
   },
   {
     id: "exp-current",
@@ -48,7 +48,7 @@ export const CHAT_QA: ChatQA[] = [
     id: "exp-years",
     question: "How many years of experience?",
     answer:
-      "I have over 6 years of professional experience in full stack web development, starting from 2018.",
+      "I have over 7 years of professional experience in full stack web development, starting from 2018. I also hold a BS in IT and Data Science, AWS Certified Cloud Practitioner, and FE certification.",
   },
   {
     id: "proj-featured",

@@ -7,72 +7,81 @@ import project2Fallback from "../assets/projects/project-beta.png?w=800&quality=
 import project3 from "../assets/projects/project-1.png?w=800&format=webp&quality=80&imagetools";
 import project3Fallback from "../assets/projects/project-1.png?w=800&quality=80&imagetools";
 
-export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in backend-end technologies like PHP(Laravel), as well as front-end technologies like Next js, MySQL, Oracle, and Firebase. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
+export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With over 7 years of hands-on experience, I have honed my skills in backend technologies like PHP (Laravel) and Java, as well as frontend technologies like Next.js and TypeScript. I also work with MySQL, Oracle, REST APIs, and AI integrations (OpenAI, Azure AI). My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 6 years of professional experience, I have worked with a variety of technologies, including PHP, Next.js, Node.js, MySQL, tailwind CSS, and Bootstrap. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With over 7 years of professional experience, I have worked with a variety of technologies, including PHP (Laravel), Next.js, TypeScript, Java, MySQL, Oracle, Tailwind CSS, and Bootstrap. I hold a BS in Information Technology and Data Science, as well as certifications including AWS Certified Cloud Practitioner and Fundamental Information Technology Engineer (FE). My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions.`;
 
 export const EXPERIENCES = [
   {
     year: "2018 - 2019",
     role: "RPA Developer",
-    company: "Funward Myanmar Co.Ltd",
-    description: `Developed automation bot using UiPath to automate repetitive tasks and streamline business processes. Collaborated with business analysts to identify automation opportunities and design efficient solutions. Conducted user training and provided ongoing support for automation projects.`,
+    company: "Funward Myanmar Co., Ltd.",
+    description: `Developed chatbot and automation bots using UiPath to process emails, Excel data, and web information. Built robots that check messages, send emails, store data in relevant locations, and retrieve necessary information automatically.`,
     technologies: ["UiPath"],
   },
   {
-    year: " 2019 - 2022",
+    year: "2019 - 2022",
     role: "Full Stack Developer",
-    company: " ID Myanmar Co.Ltd",
-    description: `Developed especially Learning Management System, Employee Management System and Inventory Management System. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
+    company: "IDM Myanmar Co., Ltd.",
+    description: `Developed multiple enterprise systems including Inventory Management System, SOP Tool Guide System, Learning Management System (Moodle), Attendance Management System, and Employee Information Management System. Handled full development lifecycle from design to testing and maintenance.`,
     technologies: [
       "Java EE",
+      "Java Spring",
       "Oracle",
+      "PHP",
+      "Laravel",
+      "MySQL",
       "HTML",
       "CSS",
-      "Bootstrap",
-      "Laravel",
-      "mySQL",
+      "Tailwind",
     ],
   },
-
   {
     year: "2022",
     role: "Freelance Web Developer",
     company: "Domalog",
-    description: `worked at Domalog project as a FreeLance Web Developer.`,
-    technologies: ["Angular Js", "tailwind", "Laravel", "MySql"],
-  },
-  {
-    year: "2024",
-    role: "Foreign Assistant",
-    company: " One Terrace",
-    description: `Assistant in Global-Mindset Training Program of One Terrace .`,
-    technologies: ["Japanese", "English"],
+    description: `Built a gaming information sharing website where users can share their gaming experiences and tips.`,
+    technologies: ["Angular", "Tailwind", "Laravel", "MySQL"],
   },
   {
     year: "2022 - current",
     role: "Full Stack Developer",
-    company: " One Terrace",
-    description: `Developed Policy Checking System Using Ai , Learning ManagementSystem, School Exam System and so on. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
+    company: "One Terrace",
+    description: `Developed AI-powered policy compliance evaluation system using OpenAI and Azure AI APIs, Student Information Management System, and Exam Result Management System. Built features including Sanctum API authentication, Job Batch/Queue processing, Two-Factor Authentication, and AI calculation functions.`,
     technologies: [
-      "Next Js",
-      "tailwind",
-      "Bootstrap",
+      "Next.js",
+      "TypeScript",
+      "Tailwind",
       "Laravel",
-      "mySQL",
-      "firebase",
+      "MySQL",
+      "REST API",
+      "OpenAI API",
+      "Azure AI API",
     ],
+  },
+  {
+    year: "2024",
+    role: "Foreign Assistant",
+    company: "One Terrace",
+    description: `Assistant in Global-Mindset Training Program of One Terrace.`,
+    technologies: ["Japanese", "English"],
   },
   {
     year: "2025",
     role: "Freelance Developer",
-    company: "FreeLance",
+    company: "Freelance",
     description: `Food E-commerce System`,
-    technologies: ["Java Spring", "tailwind", "React", "mySQL"],
+    technologies: ["Java Spring", "Tailwind", "React", "MySQL"],
   },
 ];
 
 export const ACHIEVEMENTS = [
+  {
+    year: "2017",
+    title: "Information Technology Passport Examination (IP)",
+    description: `Passed the ITPEC IP Examination.`,
+    link: "",
+  },
   {
     year: "2017",
     title: "School Web Creation Competition",
@@ -82,24 +91,36 @@ export const ACHIEVEMENTS = [
   {
     year: "2017",
     title: "ITPEC Quiz Competition (Myanmar)",
-    description: `Passed 16 teams stage`,
+    description: `Passed 16 teams stage.`,
     link: "",
   },
   {
     year: "2018",
-    title: "Graduated from Metro",
+    title: "Fundamental Information Technology Engineer Examination (FE)",
+    description: `Passed the ITPEC FE Examination.`,
+    link: "",
+  },
+  {
+    year: "2018",
+    title: "Graduated from Metro IT & Japanese School",
     description: `Graduated with GOLDEN badge.`,
     link: "",
   },
   {
     year: "2022",
-    title: "CodeWar challenge",
-    description: `Rank:8 kyu`,
+    title: "Japanese Language Proficiency Test (JLPT N3)",
+    description: `Certified Japanese Language Proficiency Test N3 level.`,
+    link: "",
+  },
+  {
+    year: "2022",
+    title: "CodeWars Challenge",
+    description: `Rank: 8 kyu`,
     link: "https://www.codewars.com/users/lwinmoeaung",
   },
   {
     year: "2022",
-    title: "HackerRank challenge",
+    title: "HackerRank Challenge",
     description: `Gold level badge.`,
     link: "https://www.hackerrank.com/profile/lmadev",
   },
@@ -108,6 +129,18 @@ export const ACHIEVEMENTS = [
     title: "Lara Camp Competition (Myanmar)",
     description: `Winner Prize and led the winning team as team leader.`,
     link: "https://github.com/lara-camp",
+  },
+  {
+    year: "2024",
+    title: "AWS Certified Cloud Practitioner",
+    description: `Earned AWS Certified Cloud Practitioner certification.`,
+    link: "",
+  },
+  {
+    year: "2026",
+    title: "BS in Information Technology and Data Science",
+    description: `Graduated from European International University - Paris with a Bachelor of Science in IT and Data Science.`,
+    link: "",
   },
 ];
 
@@ -232,8 +265,26 @@ export const PROJECTS: Project[] = [
   },
 ];
 
+export const EDUCATION = [
+  {
+    year: "2025 - 2026",
+    institution: "European International University - Paris",
+    degree: "Bachelor of Science (BS) in Information Technology and Data Science",
+  },
+  {
+    year: "2016 - 2018",
+    institution: "Metro IT & Japanese School",
+    degree: "IT Diploma",
+  },
+  {
+    year: "2016 - 2019",
+    institution: "Dagon University",
+    degree: "English (On Leave)",
+  },
+];
+
 export const CONTACT = {
-  address: "Live in Tokyo , Japan",
-  phone: "+81 070-122-65089",
+  address: "Live in Tokyo, Japan",
+  phone: "+81 070-1226-5089",
   email: "lwinmoeaung.it@gmail.com",
 };

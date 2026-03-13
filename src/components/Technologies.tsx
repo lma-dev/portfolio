@@ -1,8 +1,8 @@
 import { useRef, useMemo } from "react";
-import { TbBrandNextjs } from "react-icons/tb";
+import { TbBrandNextjs, TbBrandTypescript } from "react-icons/tb";
 import { FaLaravel, FaPhp } from "react-icons/fa6";
 import { SiMysql, SiTailwindcss } from "react-icons/si";
-import { FaGithub, FaAws } from "react-icons/fa";
+import { FaGithub, FaAws, FaDocker } from "react-icons/fa";
 import { BsBootstrap } from "react-icons/bs";
 import { motion, useInView } from "framer-motion";
 import type { Variants } from "framer-motion";
@@ -26,10 +26,12 @@ const ICON_CONFIGS: { Icon: React.ComponentType<{ className?: string }>; duratio
   { Icon: FaPhp, duration: 3, className: "text-7xl text-blue-400" },
   { Icon: SiMysql, duration: 5, className: "text-7xl text-cyan-600" },
   { Icon: TbBrandNextjs, duration: 2, className: "text-7xl text-black-400" },
+  { Icon: TbBrandTypescript, duration: 6, className: "text-7xl text-blue-500" },
   { Icon: FaGithub, duration: 6, className: "text-7xl text-black-400" },
-  { Icon: FaAws, duration: 4, className: "text-7xl text-white-400" },
-  { Icon: SiTailwindcss, duration: 3, className: "text-7xl text-black-400" },
-  { Icon: BsBootstrap, duration: 2.5, className: "text-7xl text-black-400" },
+  { Icon: FaDocker, duration: 3.5, className: "text-7xl text-blue-400" },
+  { Icon: FaAws, duration: 4, className: "text-7xl text-orange-400" },
+  { Icon: SiTailwindcss, duration: 3, className: "text-7xl text-cyan-400" },
+  { Icon: BsBootstrap, duration: 2.5, className: "text-7xl text-purple-500" },
 ];
 
 export const Technologies = () => {
