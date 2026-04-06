@@ -20,6 +20,7 @@ export interface Project {
   imageWebp?: string;
   image?: string;
   technologies: string[];
+  tags?: string[];
   category: ProjectCategory;
   featured: boolean;
   order: number;

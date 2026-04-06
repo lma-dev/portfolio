@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FiArrowRight } from "react-icons/fi";
+import { FiArrowRight, FiGithub } from "react-icons/fi";
 import type { Project } from "../../types/project";
 import { PROJECT_CATEGORIES } from "../../types/project";
 
@@ -47,7 +47,21 @@ export const FeaturedProjectCard = ({
           </h3>
 
           {project.role && (
-            <p className="text-xs text-gray-400 mb-3">{project.role}</p>
+            <p className="text-xs text-gray-400 mb-2">{project.role}</p>
+          )}
+
+          {/* Tags */}
+          {project.tags && project.tags.length > 0 && (
+            <div className="flex flex-wrap gap-1.5 mb-3">
+              {project.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider bg-gradient-to-r from-purple-100 to-pink-100 text-purple-800 border border-purple-200/50"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
           )}
 
           <p className="text-sm text-gray-500 line-clamp-2 mb-4">
@@ -81,14 +95,30 @@ export const FeaturedProjectCard = ({
             ))}
           </div>
 
-          {/* View Details link */}
-          <span className="inline-flex items-center gap-1.5 text-sm font-medium text-purple-600 group-hover:text-purple-800 transition-colors duration-200">
-            View Details
-            <FiArrowRight
-              size={14}
-              className="transition-transform duration-200 group-hover:translate-x-1"
-            />
-          </span>
+          {/* Actions */}
+          <div className="flex items-center justify-between">
+            <span className="inline-flex items-center gap-1.5 text-sm font-medium text-purple-600 group-hover:text-purple-800 transition-colors duration-200">
+              View Details
+              <FiArrowRight
+                size={14}
+                className="transition-transform duration-200 group-hover:translate-x-1"
+              />
+            </span>
+            <div className="flex items-center gap-2">
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="p-1.5 rounded-full text-gray-400 hover:text-gray-700 hover:bg-gray-100 transition-colors duration-200"
+                  title="View Source Code"
+                >
+                  <FiGithub size={16} />
+                </a>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </motion.div>
